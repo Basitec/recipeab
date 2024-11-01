@@ -14,9 +14,12 @@ function Search() {
         // handleSearch()  // call the function when the input changes, not on every keystroke.  This will improve performance.
     }
     let handleSearch = (e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         // console.log(inputValue);
-        navigate(`/search/${inputValue}`)
+        if(inputValue){
+          navigate(`/search/${inputValue}`)
+
+        }
         setInputValue('')
     }
   return (

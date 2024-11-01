@@ -48,7 +48,7 @@ function RecipeSearch() {
             console.log('Could not find what you were looking for');
             
          })
-    }, [])
+    }, [id])
   return (
     <>
   <Link to='/' className='goback'>Go back to recipe page</Link>

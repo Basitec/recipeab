@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Recipes from './Recipes';
+import User from './User';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import EachRecipe from './EachRecipe';
+import Search from './Search';
+import RecipeSearch from './RecipeSearch';
+import Recipes2 from './Recipes2';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+<Routes>
+  <Route path='/' element={<Search/>}>
+    
+  <Route exact path='/' element={<Recipes />}/>
+  <Route path='/1' element={<Navigate to={'/'}/>}/>
+  <Route path='/:id' element={<Recipes2/>}/>
+  <Route path='/search/:id' element={<RecipeSearch />}/>
+  </Route>
+  <Route path='/eachrecipe/:id' element={<EachRecipe />}/>
+</Routes>
+
+{/* <User /> */}
+
+</>
   );
 }
 

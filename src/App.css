@@ -1,4 +1,124 @@
-.App {
+div.recipes{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* background-color: #34f; */
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+  gap: 1em;
+}
+ol{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+ol li{
+  width: 40%;
+  padding: 5px 0;
+  /* border: 1px solid #fff; */
+}
+ul{
+  list-style-type: none;
+}
+ul li{
+  padding: 5px 0;
+}
+div.desleft img{
+  padding: 15px 0;
+  width: 100%;
+}
+div.EachRecipe div{
+  width: 30%;
+}
+div.EachRecipe{
+  display: flex;
+  background-color: rgba(255, 51, 68, 0.36);
+  margin: 0 auto;
+  align-items: center;
+  padding: 20px;
+  border-radius: 40px;
+  justify-content: space-evenly;
+  width: 80%;
+}
+div.desleft a, a.goback{
+  text-decoration: none;
+  color: #000;
+  /* background-color: aqua; */
+  padding: 20px 0 30px;
+}
+div.recipes h2, h3,h4{
+  font-weight: 200;
+  font-size: 1.2em;
+}
+div.recipes div.eachFood{
+  background-color: #ff33445c;
+  align-items: center;
+  display: flex;
+  
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+}
+div.Pagination{
+  display: flex;
+  justify-content: space-between;
+  width: 7%;
+  margin: 0 auto;
+  align-items: center;
+  /* align-items: center; */
+  /* background-color: aqua; */
+  padding: 10px;
+  /* margin: 20px 0; */
+}
+div.searching{
+  padding: 10px 0;
+}
+div.Pagination a{
+  text-decoration: none;
+  color: #000;
+}
+.active{
+  padding: 10px;
+  background-color: rgba(255, 51, 68, 0.36);
+}
+h1{
+  text-align: center;
+}
+div.recipes img{
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+}
+form.search{
+  padding: 10px 0;
+  display: flex;
+  /* background-color: aqua; */
+  margin: 0 auto;
+  width: 25%;
+  justify-content: space-between;
+}
+form.search input{
+  padding: 10px;
+  width: 15em;
+  outline: none;
+}
+div.load{
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+
+}
+form.search button{
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid rgba(255, 51, 68, 0.36);
+  border-radius: 5px;
+  background-color: rgba(255, 51, 68, 0.36);
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +155,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

@@ -54,7 +54,10 @@ function RecipeSearch() {
   <Link to='/' className='goback'>Go back to recipe page</Link>
  
   {
-    isLoading ? <><div className='load'> <img src={spine} alt='loading'/><p>Searching for the food...</p></div> </>:
+    isLoading ? <><div className='load'> 
+    <div className="loader"></div> 
+    {/* <img src={spine} alt='loading'/> */}
+    <p>Searching for the food...</p></div> </>:
    
     <>
      {
@@ -76,6 +79,7 @@ function RecipeSearch() {
       }
 
     </div>
+    // <h1></h1>
     }
     </>
   }

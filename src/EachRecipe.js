@@ -35,7 +35,11 @@ function EachRecipe() {
   return (
     <>
     {
-        isLoading? <><div className='load'> <img src={spine} alt='loading'/><p>Getting more info...</p></div> </>: <>
+        isLoading? <><div className='load'> 
+
+    <div className="loader"></div> 
+        {/* <img src={spine} alt='loading'/> */}
+        <p>Getting more info...</p></div> </>: <>
          <div className='EachRecipe'>
 
 {/* <h1>I am a boy</h1>

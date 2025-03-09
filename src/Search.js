@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
 import Sort from './Sort'
-import Pagination from './Pagination'
 function Search() {
     let [inputValue, setInputValue] = useState('')
     const navigate = useNavigate()
@@ -23,19 +22,13 @@ function Search() {
         setInputValue('')
     }
   return (
-    <div className='searching'>
-        <form onSubmit={handleSearch} className='search'>
-        <input type='text' value={inputValue} onChange={handleChange} placeholder='search for your desired recipe' required/>
+    <div className='searching '>
+        <form onSubmit={handleSearch} className='search bg-white'>
+        <input type='text' value={inputValue} className=' border-2 text-white' onChange={handleChange} placeholder='search for your desired recipe' required/>
         <button type='submit'>Search for any recipe</button>
         </form>
         {/* <Sort /> */}
 <Outlet/>
-{
-  (location.pathname.includes('/search/')) ? "":
-   <>
-<Pagination/>
-  </>
-}
     </div>
   )
 }

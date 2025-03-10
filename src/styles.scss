@@ -1,0 +1,15 @@
+// @use "pico";
+@use "node_modules/@picocss/pico/scss/pico" as *;
+
+$primary-color:#000;
+
+// .no-pico div.recipes img{
+//     all: unset;
+  
+//     width: 4em;
+//     height: 4em;
+//     border-radius: 50%;
+//   }
+body{
+    background-color: $primary-color;
+}

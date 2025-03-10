@@ -1,3 +1,7 @@
+/* h2{
+  all: unset;
+  font-size: 1em;
+} */
 div.recipes{
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -53,14 +57,23 @@ div.recipes h2, h3,h4{
   font-weight: 200;
   font-size: 1.2em;
 }
-div.recipes div.eachFood{
-  background-color: #ff33445c;
+div.recipes a.eachFood{
+
+  background-color: #000;
+  /* border: ; */
+  border: 1px solid rgba(255, 51, 68, 0.36);
+
+  /* background-color: #ff33445c; */
   align-items: center;
   display: flex;
   color: #fff;
   justify-content: space-between;
   padding: 10px;
   border-radius: 10px;
+  transition: all 300ms;
+}
+div.recipes a.eachFood:hover{
+  background-color: rgba(255, 51, 68, 0.36);
 }
 div.Pagination{
   display: flex;
@@ -113,8 +126,8 @@ h1{
   text-align: center;
 }
 div.recipes img{
-  width: 10em;
-  height: 10em;
+  width: 10em !important;
+  height: 10em !important;
   border-radius: 50%;
 }
 form.search{
@@ -122,18 +135,25 @@ form.search{
   display: flex;
   /* background-color: aqua; */
   margin: 0 auto;
-  width: 30%;
+  width: 40%;
   /* background-color: #fff; */
   justify-content: space-between;
 }
-form.search input{
-  padding: 10px;
-  border: 1px solid #fff;
-  color: #fff;
-  border-radius: 5px;
-  width: 15em;
-  outline: none;
+form.search input[type="submit"] {
+  background-color: rgba(255, 51, 68, 0.36);
+  border: 1px solid rgba(255, 51, 68, 0.36);
+
+  /* background-color: #f03355; */
+  /* Your styles here */
 }
+[role=search], [role=group]{
+  box-shadow: unset;
+}
+form.search input:focus{
+  border: 1px solid rgba(255, 51, 68, 0.36);
+  outline: 1px solid rgba(255, 51, 68, 0.36);
+}
+/* form.search input["type": "search"] {} */
 div.load{
   display: flex;
   width: 70%;
@@ -179,12 +199,14 @@ form.search button:hover{
     font-size: 16px;
   }
   div.recipes{
+    display: grid;
     grid-template-columns: repeat(1,1fr);
   }
   div.recipes div{
     width: 100%;
   }
   div.recipes img{
+    all: unset;
     width: 6em;
     height: 6em;
   }

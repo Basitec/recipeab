@@ -2,6 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+  background-color: #000 !important;
+}
 /* .no-pico div.recipes img{
   all: unset;
   width: 4em;

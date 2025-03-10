@@ -3,8 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from'react-router-dom'
 // import load from './loading.gif'
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 import spinn from './spinn.gif'
 import spine from './spine.svg'
+import styles from './h2.module.css'
+
 
 
 
@@ -66,15 +70,29 @@ function RecipeSearch() {
      <div className='recipes'>
      {
         data.map((eachData, index) =>(
-            <div key={index} className='eachFood'>
-                <img src={eachData.image} alt={eachData.image}/>
+            <Link  to={`/eachrecipe/${eachData.id}`} key={index} className='eachFood'>
+              <div
+                  style={{
+                    all:"revert",
+                    backgroundImage:`url(${eachData.image})`,
+                    width:"8em",
+                    height:"7em",
+                    backgroundSize:"contain",
+                    borderRadius:"999px",
+                    backgroundPosition:"center",
+                    margin:"0 10px"
+                  }}
+                  ></div>
+                {/* <img src={eachData.image} alt={eachData.image}/> */}
                 <div>
-                <h2>{eachData.name}</h2>
-                <h3>Difficulty : {eachData.difficulty}</h3>
-                <h4>Cuisine : {eachData.cuisine}</h4>
-                <Link to={`/eachrecipe/${eachData.id}`}>learn more</Link>
+                <h2 className={styles.h2}>{eachData.name}</h2>
+                {/* <h2 className={styles.h2}>Difficulty : {eachData.difficulty}</h2> */}
+                <h2 className={styles.h2}>Cuisine : {eachData.cuisine}</h2>
+                <h2 className={styles.h2} >Rating <Stack><Rating name="half-rating-read" defaultValue={eachData.rating} precision={0.5} readOnly /></Stack></h2>
+
+                {/* <Link to={`/eachrecipe/${eachData.id}`}>learn more</Link> */}
                  </div>
-            </div>
+            </Link>
         ))  || <h2>Recipe not found</h2>  // if data is empty, display a message to the user.  || is a logical OR operator in JavaScript. If the first operand is truthy, it returns that operand; otherwise, it returns the second operand.  In this case, it checks if data is empty before rendering the map.  If it is empty, it renders a message saying "Recipe not found".  Otherwise, it renders the mapped data.  If you want to display a different message when data
       }
 

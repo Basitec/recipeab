@@ -58,8 +58,6 @@ function Recipes() {
                     borderRadius:"999px",
                     backgroundPosition:"center",
                     margin:"0 10px"
-                    // borderRadius:"5px",
-                    // border:"1px solid black",
                   }}
                   ></div>
                 {/* <img 

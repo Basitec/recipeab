@@ -15,7 +15,8 @@ function App() {
     
   <Route exact path='/' element={<Recipes />}/>
   {/* <Route path='/:id' element={<Recipes2/>}/> */}
-  <Route path='/search/:id' element={<RecipeSearch />}/>
+  <Route path='/search' element={<RecipeSearch />}/>
+  {/* <Route path='/search/:id' element={<RecipeSearch />}/> */}
   </Route>
   <Route path='/eachrecipe/:id' element={<EachRecipe />}/>
 </Routes>

@@ -2,8 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
+/* body{
+  all: unset;
   background-color: #000 !important;
+} */
+body{
+  all: unset;
+  background-color: #000;
 }
 /* .no-pico div.recipes img{
   all: unset;

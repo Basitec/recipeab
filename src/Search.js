@@ -16,7 +16,7 @@ function Search() {
         e.preventDefault();
         // console.log(inputValue);
         if(inputValue){
-          navigate(`/search/${inputValue}`)
+          navigate(`/search?searchquery=${inputValue}`)
 
         }
         setInputValue('')
@@ -30,13 +30,9 @@ function Search() {
   value={inputValue}
   onChange={handleChange}
   className='bg-black'
-  // placeholder='search for your desired recipe' required
   aria-label="Search" />
-        {/* <input type='text' value={inputValue} className=' border-2 text-white' onChange={handleChange} placeholder='search for your desired recipe' required/> */}
         <input type="submit" value="Search" />
-        {/* <button type='submit'>Search for any recipe</button> */}
         </form>
-        {/* <Sort /> */}
 <Outlet/>
     </div>
   )

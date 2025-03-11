@@ -43,7 +43,7 @@ div.EachRecipe{
   padding: 20px;
   color: #fff;
   /* color: #fff; */
-  border-radius: 40px;
+  border-radius: 20px;
   justify-content: space-evenly;
   width: 80%;
 }
@@ -89,7 +89,7 @@ div.Pagination{
   /* margin: 20px 0; */
 }
 div.searching{
-  /* background-color: #000; */
+  background-color: #000;
   padding: 10px 0;
 }
 div.Pagination button{

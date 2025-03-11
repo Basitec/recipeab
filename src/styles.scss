@@ -11,5 +11,9 @@ $primary-color:#000;
 //     border-radius: 50%;
 //   }
 body{
+    // all: unset;
     background-color: $primary-color !important;
+}
+:root:not([data-theme]){
+    background-color: $primary-color;
 }

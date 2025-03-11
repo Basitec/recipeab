@@ -4,3 +4,45 @@
   font-size: 1.2em !important;
   /* color: #000; */
 }
+.h1{
+  all: unset;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-align: center;
+  /* color: #000; */
+}
+.wrapper{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  /* gap: 1em; */
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 90%;
+}
+.select{
+  all: unset;
+  display: block;
+  /* margin: 0 0 1em 0; */
+  padding: 0.5em;
+  width: 100%;
+  border: 1px solid rgba(255, 51, 68, 0.36);
+  border-radius: 4px;
+  background-color: rgba(255, 51, 68, 0.36);
+  font-size: 1em;
+  color: #fff;
+}
+
+@media (max-width:400px){
+  .wrapper{
+    flex-direction: column;
+    width: 80% !important;
+    /* background-color: #fff; */
+  }
+  .wrapper div{
+    /* margin: 0 auto; */
+    width: 80%;
+
+  }
+}
